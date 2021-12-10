@@ -1,0 +1,17 @@
+Header set Access-Control-Allow-Origin *
+
+#AddHandler x-httpd-php5 .php
+Options +FollowSymLinks
+RewriteEngine on
+
+
+# --- prevenir ataques cgibin ----
+RewriteCond %{QUERY_STRING} ^(%2d|-)[^=]+$ [NC]
+RewriteRule ^(.*) $1? [L]
+# --- prevenir ataques cgibin ----
+
+
+#RewriteRule ^desarrollo-de-(.*)-([0-9]+).html$ 						desarrollos.php?id=$2&tipo=web
+
+
+#ErrorDocument 404 /noexiste.php

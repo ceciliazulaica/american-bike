@@ -1,0 +1,4 @@
+AuthName "mybackadmin"
+AuthType "basic"
+AuthUserFile /home/l9000369/public_html/mybackadmin/.passwd
+Require valid-user

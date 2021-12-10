@@ -1,0 +1,26 @@
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(11) NOT NULL auto_increment,
+  `estado` int(11) default NULL,
+  `alta_ip` varchar(255) default NULL,
+  `update_ip` varchar(255) default NULL,
+  `alta_fecha` datetime default NULL,
+  `alta_usuario_id` int(11) default NULL,
+  `update_fecha` datetime default NULL,
+  `update_usuario_id` int(11) default NULL,
+  `descripcion` varchar(255) default NULL,
+  `legajo` varchar(255) default NULL,
+  `email` varchar(255) default NULL,
+  `pwd` varchar(255) default NULL,
+  `perfil_id` int(11) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `perfil_id` (`perfil_id`),
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `estado`, `alta_ip`, `update_ip`, `alta_fecha`, `alta_usuario_id`, `update_fecha`, `update_usuario_id`, `descripcion`, `legajo`, `email`, `pwd`, `perfil_id`) VALUES
+(1, 1, '186.57.193.54', '186.57.158.113', '2014-03-19 09:47:11', 4, '2014-05-30 06:51:01', 1, 'admin', 'admin', 'info@vousys.com', '82085c690f65fec8ecc6a029d973e113', 1),
+(5, 2, '201.176.10.86', '186.57.215.65', '2014-04-08 13:58:54', 1, '2014-06-03 06:58:18', 1, 'Desarrollo', '123', 'desarrollo@vousys.com', 'e737c78fa9235741f11a08f09e661860', 3);

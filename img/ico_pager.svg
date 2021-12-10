@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150px" height="63px" viewBox="1.36 1.145 150 63">
+<filter id="shadow">
+	<feGaussianBlur stdDeviation="2" in="SourceAlpha"></feGaussianBlur>
+	<feOffset result="offsetblur" dy="0" dx="0"></feOffset>
+	<feComponentTransfer>
+		<feFuncA type="linear" slope=".5"></feFuncA>
+	</feComponentTransfer>
+	<feMerge>
+		<feMergeNode></feMergeNode>
+		<feMergeNode in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<g>
+	<g filter="url(#shadow)">
+		<polygon fill="#FFFFFF" points="121.474,59.945 118.359,56.877 142.131,33.445 118.359,10.014 121.474,6.945 148.359,33.445 "/>
+	</g>
+	<g filter="url(#shadow)">
+		<polygon fill="#FFFFFF" points="31.246,59.945 4.36,33.445 31.246,6.945 34.36,10.015 10.588,33.445 34.36,56.877 "/>
+	</g>
+</g>
+</svg>

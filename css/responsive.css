@@ -1,0 +1,193 @@
+
+@media screen and (max-width: 970px) {
+
+
+	#secciones div article { padding: 0 15px }
+
+
+	#servicios article:after { width: 640px }
+
+
+	#noticias article,
+	#noticias aside { width: 48% }
+
+
+}
+@media screen and (max-width: 750px) {
+
+
+	#header { height: 140px }
+	#header:before { background-position: 60% 0 }
+
+	#logo a {
+		left: 50%;
+		transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+	}
+
+	#carrito a {
+		margin-left: -95px;
+		top: 81px; right: auto; left: 50%;
+		transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+	}
+
+	#contacto-info-header {
+		top: 80px;
+		margin-right: 30%;
+	}
+	#search form {
+		margin-left: 25px;
+		top: 80px; right: auto; left: 50%;
+		transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+	}
+
+
+	#slider div.slides div.slide figure { height: 270px }
+
+	#slider nav.pagination {
+		height: 11px;
+		bottom: 12px;
+	}
+		#slider nav.pagination a {
+			border-width: 2px;
+			width: 7px; height: 7px;
+		}
+		#slider nav.pagination a + a { margin-left: 10px }
+
+	#slider nav.pager a {
+		background-size: 123px 48px;
+		width: 30px; height: 48px;
+		left: 15px;
+	}
+	#slider nav.pager a.next { right: 15px }
+
+
+	#secciones blockquote { margin-bottom: 60px }
+
+	#secciones div { margin-bottom: -40px }
+
+		#secciones div article {
+			margin-bottom: 40px;
+			width: 50%;
+		}
+		#secciones div article:before { display: none }
+
+			#secciones div article a figure { margin-bottom: 20px }
+
+			#secciones div article a h2:after { margin: 15px auto }
+
+
+	section.separador blockquote {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	section.separador h4 { width: 100% }
+
+		section.separador h4 span {
+			display: block;
+			margin: 0 auto;
+		}
+		section.separador h4 span + span { margin-top: 15px }
+
+		section.separador h4 span:before { display: none }
+
+
+	#servicios article:after { display: none }
+
+	#servicios article ul {
+		columns: 2;
+			-moz-columns: 2;
+			-webkit-columns: 2;
+	}
+
+
+	#noticias { padding-bottom: 90px }
+
+		#noticias article,
+		#noticias aside { width: 100% }
+
+		#noticias aside { margin-top: 30px }
+
+	#noticias nav.pagination {
+		height: 11px;
+		bottom: 40px;
+	}
+		#noticias nav.pagination a {
+			border-width: 2px;
+			width: 7px; height: 7px;
+		}
+		#noticias nav.pagination a + a { margin-left: 10px }
+
+
+	#mapa { height: 240px }
+
+	#contacto article { width: 100% }
+
+		#contacto article nav { text-align: right }
+
+			#contacto article nav a { text-align: left }
+
+	#contacto form {
+		margin-top: 40px;
+		padding: 0;
+		width: 100%;
+	}
+
+
+	#contacto-info { padding-bottom: 100px }
+
+		#contacto-info article { width: 100% }
+
+		#contacto-info article + article,
+		#contacto-info article:hover { margin: 20px 0 0 }
+
+		#contacto-info article:first-child:hover { margin: 0 }
+
+
+	#footer nav ul li { padding: 0 10px }
+
+
+}
+@media screen and (max-width: 470px) {
+
+
+	#header:before { background-position: 70% 0 }
+
+
+	#secciones div article { width: 100% }
+
+
+	#servicios article {
+		padding-right: 30px;
+		padding-bottom: 90px;
+	}
+		#servicios article ul {
+			columns: 1;
+				-moz-columns: 1;
+				-webkit-columns: 1;
+		}
+		#servicios article ul li { display: block }
+
+
+	#contacto form ol li:first-child,
+	#contacto form ol li:first-child + li,
+	#contacto form p.submit input.submit { width: 100% }
+
+
+	#footer nav ul li {
+		padding: 0;
+		width: 100%;
+	}
+	#footer nav ul li + li {
+		border-left: 0 none;
+		margin-top: 10px;
+	}
+
+
+}

@@ -1,0 +1,34 @@
+/**
+ * Author   :    Verónica Osorio para VOUSYS.com 
+ * copyright:    2013
+ * Creacion :    1-2-2013 11:18
+ * Actualizado : 1-2-2013 11:18
+ *
+ */
+ 
+  /* Remove unwanted elements */
+#header, #nav, .noprint
+{
+display: none;
+}
+body,html,#main { background: #fff; color:#000}
+
+/* Ensure the content spans the full width */
+#container, #container2, #content
+{
+width: 100%; margin: 0; float: none;
+}
+
+/* Change text colour to black (useful for light text on a dark background) */
+.lighttext
+{
+color: #000
+}
+
+/* Improve colour contrast of links */
+a:link, a:visited
+{
+color: #781351
+}
+table {border:1px solid #000}
+table tr td{border:1px solid #000}

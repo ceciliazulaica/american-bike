@@ -1,0 +1,19 @@
+# humanstxt.org/
+# Developed by VOUSYS.com
+
+# TEAM
+
+    Name    :    Ver&oacute;nica Osorio 
+    Role    :    CEO &amp; Founder 
+    Contact :    info@vousys.com
+    Twitter :    @vousys
+    From    :    Argentina
+
+
+
+# VOUSYS.com - Create Ideas for your Needs!
+Last update :   2013
+Standards   :   HTML5, CSS3,..
+Components  :   Modernizr 2.6.2, jQuery 1.9.0, colorbox, jquery.validate, smoke .
+Language    :   es-en 
+Doctype     :   HTML5

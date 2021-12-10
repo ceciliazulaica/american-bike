@@ -1,0 +1,96 @@
+<?php
+	/**
+	 * Nuevo export para excel
+	 * ------------------------
+	 * Debido al inconveniente detectado en la tarea #4270
+	 * desarrolle un nuevo helper para la exportacion de xls
+	 * el mismo lo unico que requiere para crear los datos es un
+	 * array asociativo con el siguiente formato:
+	 * 	array(
+	 * 		array(
+	 * 			'indice' => valor
+	 * 		),
+	 * 		array(
+	 * 			'indice' => valor
+	 * 		)
+	 * 	)
+	 *  la idea de desarrollarlo de esta manera es para utilizar el vector
+	 *  generado por los abm y evitar tantas complicacion, y codigo dificl de 
+	 *  interpretar
+	 *
+	 *  Adicionalmente se le puede pasar un parametro extra para indicar los indicies
+	 *  que tiene que utilizar, si este parametro no se envia tomara los de la primera
+	 *  posicion
+	 *
+	 *  ejemplo mas gráfico:
+	 *  $oUsuario->resultados_vec =
+	 *  array(
+	 *  	array(
+	 *  		'id' 		=> 1,
+	 *  		'nombre'	=> 'Veránica',
+	 *  		'apellido'	=> 'Osorio',
+	 *  		'pwd'		=> 12321321
+	 *  	),
+	 *  	array(
+	 *  		'id' 		=> 2,
+	 *  		'nombre'	=> 'Pablo',
+	 *  		'apellido'	=> 'Samudia',
+	 *  		'pwd'		=> 3216549
+	 *  	)  	
+	 *  )
+	 * 
+	 *  $excelHelper = ExcelHelper::getInstance();
+	 *  
+	 *  $excelHelper->basicTemplate($oUsuario->resultados_vec);
+	 *  generaria un excel 
+	 *
+	 *  id 	| 	nombre 	 |  apellido  |   pwd
+	 *  -----------------------------------------
+	 *  1      Veránica     Osorio       12321321
+	 *  -----------------------------------------
+	 *  2 	   Pablo        Samudia      3216549	
+	 *  -----------------------------------------
+	 *
+	 *  por ahora permite la opcion de elegir el header, proximamente podemos
+	 *  extender la funcionalidad para excluya
+	 *
+	 *  $excelHelper->basicTemplate($oUsuario->resultados_vec,array('nombre','appellido'));
+	 *  generaria un excel 
+	 *
+	 *   	nombre 	 |  apellido 
+	 *  -------------------------
+	 *    Veránica     Osorio    
+	 *  -------------------------
+	 *    Pablo       Samudia    
+	 *  -------------------------
+	 * 
+	 */
+	
+	include_once 'config.php'; 
+	// Chequear la existencia de datos para exportar
+
+	//echo Debug::log(L_DEBUG,$_SESSION);
+	//die;
+
+	if(!isset($_SESSION['sess_reporte_vec']))
+		die('No existen datos para exportar');
+	
+	// Guardar los datos en una variable local para liberar los datos en sesion
+	$aReporte	= $_SESSION['sess_reporte_vec'];
+
+	unset($_SESSION['sess_reporte_vec']);
+
+
+	App::import('Helpers','ExcelHelper.php');
+	
+
+	// Seteo los haders
+	$header = array_values(array_diff(array_keys($aReporte['reporte'][0]),$tablas_campos_seguridad));
+	
+	// Crear el reporte
+	$excel = ExcelHelper::getInstance();
+	$excel->set('titulo',$aReporte["file_name"]);
+	$excel->set('filename',$aReporte["file_name"]);
+
+	$excel->basicTemplate($aReporte['reporte'],$header);
+ 
